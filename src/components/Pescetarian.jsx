@@ -3,45 +3,43 @@ import styled from "styled-components";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from 'react-router-dom';
- 
-function Popular() {
-    
-    const [popular, setPopular]=useState([]);
 
-    useEffect(() => {
-        getPopular();
-    },[]);
-    const getPopular = async () =>{
-        
-        // CREAT CACHE ON LOCAL STOrAGE\
-        // NOTE LOCALSTORAGE ONLY SAVES STRINGS HENCE **parse & stringify**
-        const check =localStorage.getItem('popular');
+function Pescetarian() {
+  const [veggie, setPescetarian]=useState([]);
 
-        // if there is somethin
-        if(check){
-            setPopular(JSON.parse(check));
-        
-        }
-        // if empty
-        else{
-            const api=await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
-            const data=await api.json();
-        //    STORE IT HERE AFTER FETCH
-            localStorage.setItem('popular', JSON.stringify(data.recipes));
+  useEffect(() => {
+      getPescetarian();
+  },[]);
+  const getPescetarian = async () =>{
+      
+      // CREAT CACHE ON LOCAL STOrAGE\
+      // NOTE LOCALSTORAGE ONLY SAVES STRINGS HENCE **parse & stringify**
+      const check =localStorage.getItem('pescetarian');
 
-            setPopular(data.recipes);
-            console.log(data);
-        }
+      // if there is somethin
+      if(check){
+          setPescetarian(JSON.parse(check));
+      
+      }
+      // if empty
+      else{
+          const api=await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=pescetarian`);
+          const data=await api.json();
+      //    STORE IT HERE AFTER FETCH
+          localStorage.setItem('pescetarian', JSON.stringify(data.recipes));
 
-    //
+          setPescetarian(data.recipes);
+          console.log(data);
+      }
 
-    }
-    return (
+  //
+
+  }
+  return (
     <div>
-
-           
-                <Wrapper>
-                    <h3>Popular Picks</h3>
+      
+      <Wrapper>
+                    <h3>Pescetarian</h3>
 
                     <Splide options={{
                         perPage:4,
@@ -51,14 +49,14 @@ function Popular() {
                         gap: "5rem"
                     }}>
 
-                    {popular.map((recipe) => {
+                    {veggie.map((recipe) => {
                         return(
                             <SplideSlide key={recipe.id}>
                             <Card>
                                 <Link to={"/recipe/"+recipe.id}>
-                                    <p>{recipe.title}</p>
-                                    <img src={recipe.image} alt={recipe.title} />
-                                    <Gradient />
+                                <p>{recipe.title}</p>
+                                <img src={recipe.image} alt={recipe.title} />
+                                <Gradient />
                                 </Link>
                             </Card>
                             </SplideSlide>
@@ -66,11 +64,10 @@ function Popular() {
                     })}
                     </Splide>
                 </Wrapper>
-           
-
     </div>
   );
 }
+
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
@@ -108,6 +105,7 @@ const Card = styled.div`
         display: flex;
         justify-content: center;
         align-items-center;
+        
 
 
 
@@ -123,5 +121,4 @@ const Gradient = styled.div`
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 
 `;
-
-export default Popular
+export default Pescetarian
