@@ -71,6 +71,12 @@ function Veggie() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    
+
+    h3{
+        font-size: 1.4rem;
+        font-family: 'Lobster Two', cursive;
+    }
 `;
 
 const Card = styled.div`
