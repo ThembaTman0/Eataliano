@@ -13,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 10%;
+  
 }
 
 code {
@@ -35,4 +35,120 @@ h3{
 
 a{
   color: rgb(56, 56, 56);
+  text-decoration: none;
 }
+.sub-menu-color a{
+  color: #ff9900;
+}
+.sub-menu {
+  display: none;
+}
+.menu-bar a{
+  text-decoration: none;
+}
+
+.menu-bar ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-left: 15px;
+  border-radius: 0.4rem;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.calltoact {
+  color: #ff9900;
+  position: relative;
+  text-decoration: none;
+}
+
+.calltoact::before {
+  content: '';
+  position: absolute;
+  width: 23%;
+  height: 2px;
+  border-radius: 0px;
+  background-color: #ff9900;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.calltoact:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.footer-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color:#f0f9ff;
+  background-color:#282d32;
+
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-div p{
+  
+  bottom : 0px; 
+  font-weight: 300; 
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem; 
+
+}
+.footer-div h2{
+  color: #ff9900;;
+  text-align: center;
+  bottom : 0px; 
+  font-weight: 300; 
+  font-size: 1.6rem;
+  margin-bottom: 2rem; 
+
+}
+.footer-div ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  
+}
+
+.footer-div li{
+  margin: 10px;
+}
+.footer-div li a{
+  color: white;
+}
+/* Target websites layout but not the Footer */
+.content-wrap{
+  margin: 0% 1%;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  
+}
+::-webkit-scrollbar-thumb {
+  background-color: #8b8b8b;
+  border-radius: 20px;
+  border:5px solid transparent;
+  background-clip: content-box;
+}
+/* 
+.page-container{
+  width: 100%;
+} */

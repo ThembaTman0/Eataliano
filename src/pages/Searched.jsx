@@ -57,6 +57,8 @@ const Card = styled.div`
     h4{
       text-align: center;
       padding: 1rem;
+      font-size: 1.4rem;
+      font-family: 'Lobster Two', cursive;
     }
 `;
 export default Searched

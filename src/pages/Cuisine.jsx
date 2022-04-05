@@ -10,6 +10,7 @@ function Cuisine() {
         const data=await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=50`);
         const recipes=await data.json();
         setCuisine(recipes.results);
+        
     };
 
     useEffect(() =>{
@@ -17,12 +18,15 @@ function Cuisine() {
       console.log(params.type);
     },[params.type]);
     return (
+    <PageLayout>
+    <h1>{params.type}</h1>
     <Grid
       animate={{opacity: 1}}
       initial={{opacity: 0}}
       exit={{opacity: 0}}
       transition={{duration: 0.5}}
     >
+      
       {cuisine.map((item) => {
         return(
           <Card key={item.id}>
@@ -34,6 +38,7 @@ function Cuisine() {
         );
       })}
     </Grid>
+    </PageLayout>
   )
 }
 const Grid= styled(motion.div)`
@@ -45,7 +50,7 @@ const Grid= styled(motion.div)`
 const Card = styled.div`
 
     img {
-        border-radius: 2rem;
+        border-radius: 0.2rem;
         width: 100%;
         
         
@@ -58,6 +63,15 @@ const Card = styled.div`
     h4{
       text-align: center;
       padding: 1rem;
+    }
+`;
+
+const PageLayout=styled.div`
+    h1{
+      
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 4rem;
     }
 `;
 export default Cuisine

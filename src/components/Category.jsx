@@ -8,19 +8,19 @@ function Category() {
   return (
     <List>
         <SLink to={"/cuisine/Italian"}>
-           <FaPizzaSlice/> 
+           {/* <FaPizzaSlice/>  */}
            <h4>Italian</h4>
         </SLink>
         <SLink to={"/cuisine/American"}>
-           <FaHamburger/> 
+           {/* <FaHamburger/>  */}
            <h4>American</h4>
         </SLink>
         <SLink to={"/cuisine/Thai"}>
-           <GiNoodles/> 
+           {/* <GiNoodles/>  */}
            <h4>Thai</h4>
         </SLink>
         <SLink to={"/cuisine/Japanese"}>
-           <GiChopsticks/> 
+           {/* <GiChopsticks/>  */}
            <h4>Japanese</h4>
         </SLink>
 
@@ -28,27 +28,25 @@ function Category() {
   )
 }
 const SLink=styled(NavLink)`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   
+
    align-items: center;
    margin-right: 3rem;
    text-decoration: none;
    cursor: pointer;
-   background: linear-gradient(35deg, #494949,#313131);
-   width: 6rem;
-   height: 6rem;
-   border-radius: 50%;
+
    
 
    h4{
       font-size: 0.8rem;
-      color: white;
+      color: black;
       font-weight: 300;
-      padding-top:0.3rem
+      
+      padding: 0rem 1.2rem;
    }
 
    svg{
+      display: flex;
       font-size: 1.5rem;
       color: white;
    }
@@ -61,14 +59,13 @@ const SLink=styled(NavLink)`
       }
       h4{
          
-         color: white;
+         color: #ff9900;
       }
    }
 
 `;
 const List=styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0rem;
+
+    margin: 0rem 0rem;
 `;
 export default Category
