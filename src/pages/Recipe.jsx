@@ -29,7 +29,9 @@ function Recipe() {
     initial={{opacity: 0}}
     exit={{opacity: 0}}
     transition={{duration: 0.5}}>
+      <center>
 
+      
       <div>
         <h2>{details.title}</h2>
         
@@ -59,6 +61,7 @@ function Recipe() {
         )}
  
       </Info>
+      </center>
     </DetailWrapper>
   )
 }
@@ -66,7 +69,7 @@ function Recipe() {
 const DetailWrapper = styled(motion.div)`
   margin-top: 10rem;
   margin-bottom: 5rem;
-  display: flex;
+
   .active{
     
     background: #ff9900;
@@ -91,6 +94,7 @@ const DetailWrapper = styled(motion.div)`
 
 const Button = styled.button`
   padding: 1rem 2rem;
+  margin-top: 4rem;
   color: #313131;
   background: white;
   border: none;
@@ -102,8 +106,15 @@ const Button = styled.button`
 `;
 const Image = styled.img`
   border-radius: 0.2rem;  
+  
 `;
 const Info=styled.div`
-   margin-left: 10rem;
+   margin-left: 4rem;
+   margin-right: 4rem;
+
+`;
+const center=styled.div`
+  align-items: center;
+  margin-bottom: 4rem;
 `;
 export default Recipe

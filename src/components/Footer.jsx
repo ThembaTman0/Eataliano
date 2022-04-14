@@ -5,7 +5,7 @@ import { FaInstagram,FaFacebookF,FaMapMarkerAlt,FaGithub } from "react-icons/fa"
 function Footer() {
   return (
     <footer className='footer-div'>
-        <h2>FOOTER</h2>
+        
         <ul>
           <li><FaInstagram/></li>
           <li><FaFacebookF/></li>
