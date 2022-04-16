@@ -42,6 +42,7 @@ function Recipe() {
       <Info>
         <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab("instructions")}>Intructions</Button>
         <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab("ingredients")}>Ingredients</Button>
+        <textStyler>
         {activeTab === 'instructions' && (
             <div>
                   {/* WHAT???? */}
@@ -59,7 +60,7 @@ function Recipe() {
               )}
             </ul>
         )}
- 
+      </textStyler>
       </Info>
       </center>
     </DetailWrapper>
@@ -111,10 +112,18 @@ const Image = styled.img`
 const Info=styled.div`
    margin-left: 4rem;
    margin-right: 4rem;
-
+   
+   border-radius: 2rem;
+   padding: 25px 100px 75px 100px;
+   
 `;
 const center=styled.div`
   align-items: center;
   margin-bottom: 4rem;
+  
+`;
+
+const textStyler=styled.div`
+  text-align: justify;
 `;
 export default Recipe
