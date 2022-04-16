@@ -31,7 +31,7 @@ function App() {
                 </ul>
               </div>
             </li>
-            <li ><Link to={"/special/"}>Special</Link></li>
+            {/* <li ><Link to={"/special/"}>Special</Link></li> */}
             <li><a href="#">Contact</a></li>
         </ul>
         <Search/>

@@ -75,6 +75,7 @@ const Wrapper = styled.div`
     
     
     h3{
+        text-align: center;
         font-size: 1.4rem;
         // font-family: 'Lobster Two', cursive;
     }
@@ -89,7 +90,7 @@ const Card = styled.div`
     margin-bottom: 4rem;
     margin-top: 1rem;
     margin-left: 2rem;
-    box-shadow: rgba(149, 157, 165, 0.7) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
 
 
     
@@ -113,7 +114,7 @@ const Card = styled.div`
         color: black;
         width: 100%;
         text-align: center;
-        font-weight: 300;
+        font-weight: 600;
         font-size: 0.8rem;
         height: 15%;
         display: flex;
