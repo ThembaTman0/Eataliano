@@ -148,7 +148,7 @@ a{
   border:5px solid transparent;
   background-clip: content-box;
 }
-/* 
-.page-container{
-  width: 100%;
-} */
+/* Contol how the bullet point looks */
+::marker{
+  color: #ff9900;
+}

@@ -40,9 +40,12 @@ function Recipe() {
         </Image>
       </div>
       <Info>
+        <center>
         <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab("instructions")}>Intructions</Button>
         <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab("ingredients")}>Ingredients</Button>
-        <textStyler>
+        </center>
+        
+        
         {activeTab === 'instructions' && (
             <div>
                   {/* WHAT???? */}
@@ -52,6 +55,7 @@ function Recipe() {
             </div>
         )}
         {activeTab === 'ingredients' && (
+            
             <ul>
               {details.extendedIngredients.map((ingredient) =>
                 <li key={ingredient.id}>
@@ -60,7 +64,7 @@ function Recipe() {
               )}
             </ul>
         )}
-      </textStyler>
+      
       </Info>
       </center>
     </DetailWrapper>
@@ -86,10 +90,11 @@ const DetailWrapper = styled(motion.div)`
     margin-top: 2rem;
   }
   li{
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     margin-top: 2rem;
-    font-weight: 600;
+    font-weight: 400;
+    
   }
 `;
 
@@ -112,7 +117,8 @@ const Image = styled.img`
 const Info=styled.div`
    margin-left: 4rem;
    margin-right: 4rem;
-   
+   width: 60rem;
+   text-align: left;
    border-radius: 2rem;
    padding: 25px 100px 75px 100px;
    
@@ -123,7 +129,5 @@ const center=styled.div`
   
 `;
 
-const textStyler=styled.div`
-  text-align: justify;
-`;
+
 export default Recipe
