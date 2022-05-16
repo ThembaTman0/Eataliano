@@ -34,9 +34,9 @@
 
 ## <img src="imgs/git-fork-svgrepo-com.svg" width="30" height="30"> Cloning / Forking
 
-Please review the [license](LICENSE.txt) and remove all of my personal information (resume, blog posts, images, etc.).
+<!-- Please review the [license](LICENSE.txt) and remove all of my personal information (resume, blog posts, images, etc.). -->
 * Please do not copy it directly.
-* Please give me proper credit by linking back to [thembatman0.github.io](https://thembatman0.github.io/Portfolio/) Thanks!
+<!-- * Please give me proper credit by linking back to [thembatman0.github.io](https://thembatman0.github.io/Portfolio/) Thanks! -->
 
 
 ##  Getting Started with Create React App
