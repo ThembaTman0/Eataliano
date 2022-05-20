@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Portfolio Website
+  Eataliano
 </h1>
 <p align="center">
   <a href="https://eataliano.netlify.app/" target="_blank">Eataliano.netlify.app</a> built with <a href="https://reactjs.org/" target="_blank">ReactJS</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
